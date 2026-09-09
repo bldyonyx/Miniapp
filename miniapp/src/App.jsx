@@ -13,9 +13,9 @@ function HomePage() {
 
   return (
     <main className={theme}>
-      <div className="min-h-screen bg-[#F5F3FF] px-5 py-10 transition-colors duration-500 dark:bg-[#17121F] sm:px-6 sm:py-12">
+      <div className={`min-h-screen px-5 py-10 transition-colors duration-500 sm:px-6 sm:py-12 ${selectedMode.homeTheme}`}>
         <div className="mx-auto max-w-3xl">
-          <Header />
+          <Header toggleClassName={selectedMode.toggle} />
 
           <section className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {focusModes.map((mode) => (
@@ -26,6 +26,9 @@ function HomePage() {
                 description={mode.description}
                 isSelected={selectedModeId === mode.id}
                 onSelect={() => setSelectedModeId(mode.id)}
+                className={mode.card}
+                selectedClassName={mode.selectedCard}
+                idleClassName={mode.idleCard}
               />
             ))}
           </section>

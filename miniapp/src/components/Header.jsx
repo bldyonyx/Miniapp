@@ -1,6 +1,6 @@
 import ThemeToggle from './ThemeToggle'
 
-function Header() {
+function Header({ toggleClassName }) {
   return (
     <header className="flex flex-col gap-5 border-b border-violet-200/70 pb-7 transition-colors duration-500 sm:flex-row sm:items-center sm:justify-between dark:border-violet-900/60">
       <div>
@@ -11,7 +11,7 @@ function Header() {
           Une petite application React avec modes et theme.
         </p>
       </div>
-      <ThemeToggle />
+      <ThemeToggle className={toggleClassName} />
     </header>
   )
 }

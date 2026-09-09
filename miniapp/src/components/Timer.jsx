@@ -50,16 +50,16 @@ function Timer({ buttonClassName }) {
   }
 
   return (
-    <section className="mt-8 border-t border-current/15 pt-6">
+    <section className="mt-8 border-t border-[#29233B]/15 pt-6 text-[#29233B] dark:border-white/20 dark:text-[#F5F0FA]">
       <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-        <label className="text-sm font-medium">
+        <label className="text-sm font-medium text-[#554B63] dark:text-[#E9D5FF]">
           Minutes
           <input
             type="number"
             min="1"
             value={minutes}
             onChange={handleMinutesChange}
-            className="mt-2 block w-32 rounded-lg border border-current/20 bg-white/80 px-3 py-2 text-base text-[#29233B] outline-none transition focus:ring-2 focus:ring-current/30 dark:bg-black/20 dark:text-[#F5F0FA]"
+            className="mt-2 block w-32 rounded-lg border border-[#29233B]/20 bg-white/80 px-3 py-2 text-base text-[#29233B] outline-none transition focus:ring-2 focus:ring-current/30 dark:border-white/25 dark:bg-white/10 dark:text-[#F5F0FA]"
           />
         </label>
 
@@ -79,14 +79,14 @@ function Timer({ buttonClassName }) {
         <button
           type="button"
           onClick={() => setIsRunning(false)}
-          className="rounded-lg border border-current/20 px-4 py-2 text-sm font-semibold transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-current/30 focus:ring-offset-2 focus:ring-offset-white dark:hover:bg-white/10 dark:focus:ring-offset-[#17121F]"
+          className="rounded-lg border border-[#29233B]/20 px-4 py-2 text-sm font-semibold text-[#29233B] transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-current/30 focus:ring-offset-2 focus:ring-offset-white dark:border-white/25 dark:text-[#F5F0FA] dark:hover:bg-white/10 dark:focus:ring-offset-[#17121F]"
         >
           Pause
         </button>
         <button
           type="button"
           onClick={resetTimer}
-          className="rounded-lg border border-current/20 px-4 py-2 text-sm font-semibold transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-current/30 focus:ring-offset-2 focus:ring-offset-white dark:hover:bg-white/10 dark:focus:ring-offset-[#17121F]"
+          className="rounded-lg border border-[#29233B]/20 px-4 py-2 text-sm font-semibold text-[#29233B] transition hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-current/30 focus:ring-offset-2 focus:ring-offset-white dark:border-white/25 dark:text-[#F5F0FA] dark:hover:bg-white/10 dark:focus:ring-offset-[#17121F]"
         >
           Reset
         </button>
